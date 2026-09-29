@@ -157,8 +157,18 @@ def scalar_broadcast_add(arr, scalar):
     scalar_matrix = scalar*np.ones(arr.shape, dtype = arr.dtype)
     return arr + scalar_matrix
 
-# Step 20 - vector_matrix_broadcast_add (not yet solved)
-# TODO: implement
+# Step 20 - vector_matrix_broadcast_add
+import numpy as np
+
+def vector_matrix_broadcast_add(matrix, vector):
+    """Add a 1D vector to each row of a 2D matrix via broadcasting."""
+    # TODO: return matrix + vector broadcast across rows
+    mat_shape = matrix.shape
+    matrix_sum = np.zeros(mat_shape)
+    for i in range(mat_shape[0]):
+        for j in range(mat_shape[1]):
+            matrix_sum[i][j] = matrix[i][j] + vector[j]
+    return matrix_sum
 
 # Step 21 - array_exp (not yet solved)
 # TODO: implement
