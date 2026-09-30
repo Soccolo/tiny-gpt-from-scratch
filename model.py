@@ -223,8 +223,19 @@ def max_along_axis(arr, axis):
     """Return the maximum of arr along the given axis, with that axis removed."""
     return np.max(arr, axis)
 
-# Step 27 - matmul (not yet solved)
-# TODO: implement
+# Step 27 - matmul
+import numpy as np
+
+def matmul(a, b):
+    """Return the matrix product a @ b for 2D arrays a (M,K) and b (K,N)."""
+    # TODO: compute the matrix product of a and b
+    M = a.shape[0]
+    N = b.shape[1]
+    c = np.zeros([M, N], dtype = a.dtype)
+    for i in range(M):
+        for j in range(N):
+            c[i][j] = sum([a[i][k]*b[k][j] for k in range(a.shape[1])])
+    return c
 
 # Step 28 - transpose_matrix (not yet solved)
 # TODO: implement
