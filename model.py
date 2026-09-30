@@ -237,8 +237,11 @@ def matmul(a, b):
             c[i][j] = sum([a[i][k]*b[k][j] for k in range(a.shape[1])])
     return c
 
-# Step 28 - transpose_matrix (not yet solved)
-# TODO: implement
+# Step 28 - transpose_matrix
+def transpose_matrix(arr):
+    """Return the transpose of a 2D array."""
+    # TODO: return the transpose of arr using the .T attribute
+    return arr.T
 
 # Step 29 - sum_keepdims (not yet solved)
 # TODO: implement
